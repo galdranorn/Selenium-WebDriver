@@ -11,9 +11,11 @@ public class Demo {
 		// Create driver object for Chrome (implements methods of WebDriver)
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("http://google.com");
+		// Validate if we land on right page
+		driver.get("https://demoqa.com/");
 		
-		System.out.println(driver.getTitle());
+	
+		System.out.println(driver.getCurrentUrl());
 	}
 
 }

@@ -11,11 +11,13 @@ public class Demo {
 		// Create driver object for Chrome (implements methods of WebDriver)
 		WebDriver driver = new ChromeDriver();
 		
-		// Validate if we land on right page
 		driver.get("https://demoqa.com/");
 		
-	
-		System.out.println(driver.getCurrentUrl());
+		driver.get("http://google.com");
+		driver.navigate().back();
+		
+		driver.close(); // closes current browser
+		driver.quit(); // closes all the browsers opened by selenium script
 	}
 
 }

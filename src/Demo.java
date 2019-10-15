@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,13 +12,15 @@ public class Demo {
 		// Create driver object for Chrome (implements methods of WebDriver)
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://demoqa.com/");
+		driver.get("https://demoqa.com/html-contact-form");
 		
-		driver.get("http://google.com");
-		driver.navigate().back();
+		driver.findElement(By.className("firstname")).sendKeys("FirstName");
+		driver.findElement(By.id("lname")).sendKeys("LastName");
+		driver.findElement(By.name("country")).sendKeys("MyCountry");
 		
-		driver.close(); // closes current browser
-		driver.quit(); // closes all the browsers opened by selenium script
+		driver.close();
+		
+		
 	}
 
 }

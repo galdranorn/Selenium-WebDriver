@@ -6,7 +6,10 @@ public class Parent {
 		//list.ListExercises();
 		
 		Map map = new Map();
-		map.MapExercises();
+		//map.MapExercises();
+		
+		Set set = new Set();
+		set.SetExercises();
 		
 	}
 
